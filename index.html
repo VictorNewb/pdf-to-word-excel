@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101828">
+  <title>PDF Converter - PDF to Word & Excel</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Word document generation -->
+  <script src="https://unpkg.com/docx@8.5.0/build/index.umd.js"></script>
+
+  <!-- Excel document generation -->
+  <script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="brand-icon">P</span>
+      <span>PDF<span class="brand-light">Convert</span></span>
+    </a>
+    <span class="header-label">FREE ONLINE CONVERTER</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">DOCUMENT CONVERSION MADE SIMPLE</span>
+      <h1>Convert PDF files<br><span>to Word & Excel</span></h1>
+      <p>Transform your PDF documents into editable files in just a few clicks.</p>
+    </section>
+
+    <section class="converter-card">
+      <div class="card-heading">
+        <div>
+          <h2>Upload your document</h2>
+          <p>Select a PDF file to get started.</p>
+        </div>
+        <span class="secure-label">🔒 Local processing</span>
+      </div>
+
+      <label class="drop-zone" id="dropZone" for="pdfInput">
+        <div class="upload-icon">↑</div>
+        <h3>Drag and drop your PDF here</h3>
+        <p>or <span class="browse-text">browse files</span></p>
+        <small>PDF files only · Maximum 50 MB</small>
+        <input type="file" id="pdfInput" accept=".pdf,application/pdf">
+      </label>
+
+      <div class="file-info hidden" id="fileInfo">
+        <div class="file-icon">PDF</div>
+        <div class="file-details">
+          <strong id="fileName">document.pdf</strong>
+          <span id="fileSize">0 MB</span>
+        </div>
+        <button class="remove-btn" id="removeFile" aria-label="Remove file">×</button>
+      </div>
+
+      <div class="format-section">
+        <h3>Choose output format</h3>
+        <div class="format-options">
+          <button class="format-option active" data-format="word">
+            <span class="format-icon word-icon">W</span>
+            <span class="format-details">
+              <strong>Microsoft Word</strong>
+              <small>Editable .docx document</small>
+            </span>
+            <span class="radio-indicator"></span>
+          </button>
+
+          <button class="format-option" data-format="excel">
+            <span class="format-icon excel-icon">X</span>
+            <span class="format-details">
+              <strong>Microsoft Excel</strong>
+              <small>Spreadsheet .xlsx file</small>
+            </span>
+            <span class="radio-indicator"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="progress-section hidden" id="progressSection">
+        <div class="progress-heading">
+          <span id="progressText">Preparing document...</span>
+          <span id="progressPercent">0%</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+      </div>
+
+      <div class="error-message hidden" id="errorMessage" role="alert"></div>
+
+      <button class="convert-btn" id="convertBtn" disabled>
+        <span>Convert PDF</span>
+        <span>→</span>
+      </button>
+
+      <div class="success-message hidden" id="successMessage" role="status">
+        <span class="success-icon">✓</span>
+        <div>
+          <strong>Conversion complete!</strong>
+          <p>Your document is ready to download.</p>
+          <button id="downloadBtn" class="download-btn">Download converted file ↓</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <span>⚡</span>
+        <h3>Fast conversion</h3>
+        <p>Process documents directly in your browser.</p>
+      </div>
+      <div class="feature">
+        <span>🔐</span>
+        <h3>Privacy focused</h3>
+        <p>Your PDF is processed locally, not uploaded to a server.</p>
+      </div>
+      <div class="feature">
+        <span>📄</span>
+        <h3>Editable files</h3>
+        <p>Download documents you can edit and work with.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 PDFConvert. Built for simple document conversion.</p>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101828">
+  <title>PDF Converter - PDF to Word & Excel</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Word document generation -->
+  <script src="https://unpkg.com/docx@8.5.0/build/index.umd.js"></script>
+
+  <!-- Excel document generation -->
+  <script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="brand-icon">P</span>
+      <span>PDF<span class="brand-light">Convert</span></span>
+    </a>
+    <span class="header-label">FREE ONLINE CONVERTER</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">DOCUMENT CONVERSION MADE SIMPLE</span>
+      <h1>Convert PDF files<br><span>to Word & Excel</span></h1>
+      <p>Transform your PDF documents into editable files in just a few clicks.</p>
+    </section>
+
+    <section class="converter-card">
+      <div class="card-heading">
+        <div>
+          <h2>Upload your document</h2>
+          <p>Select a PDF file to get started.</p>
+        </div>
+        <span class="secure-label">🔒 Local processing</span>
+      </div>
+
+      <label class="drop-zone" id="dropZone" for="pdfInput">
+        <div class="upload-icon">↑</div>
+        <h3>Drag and drop your PDF here</h3>
+        <p>or <span class="browse-text">browse files</span></p>
+        <small>PDF files only · Maximum 50 MB</small>
+        <input type="file" id="pdfInput" accept=".pdf,application/pdf">
+      </label>
+
+      <div class="file-info hidden" id="fileInfo">
+        <div class="file-icon">PDF</div>
+        <div class="file-details">
+          <strong id="fileName">document.pdf</strong>
+          <span id="fileSize">0 MB</span>
+        </div>
+        <button class="remove-btn" id="removeFile" aria-label="Remove file">×</button>
+      </div>
+
+      <div class="format-section">
+        <h3>Choose output format</h3>
+        <div class="format-options">
+          <button class="format-option active" data-format="word">
+            <span class="format-icon word-icon">W</span>
+            <span class="format-details">
+              <strong>Microsoft Word</strong>
+              <small>Editable .docx document</small>
+            </span>
+            <span class="radio-indicator"></span>
+          </button>
+
+          <button class="format-option" data-format="excel">
+            <span class="format-icon excel-icon">X</span>
+            <span class="format-details">
+              <strong>Microsoft Excel</strong>
+              <small>Spreadsheet .xlsx file</small>
+            </span>
+            <span class="radio-indicator"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="progress-section hidden" id="progressSection">
+        <div class="progress-heading">
+          <span id="progressText">Preparing document...</span>
+          <span id="progressPercent">0%</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+      </div>
+
+      <div class="error-message hidden" id="errorMessage" role="alert"></div>
+
+      <button class="convert-btn" id="convertBtn" disabled>
+        <span>Convert PDF</span>
+        <span>→</span>
+      </button>
+
+      <div class="success-message hidden" id="successMessage" role="status">
+        <span class="success-icon">✓</span>
+        <div>
+          <strong>Conversion complete!</strong>
+          <p>Your document is ready to download.</p>
+          <button id="downloadBtn" class="download-btn">Download converted file ↓</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <span>⚡</span>
+        <h3>Fast conversion</h3>
+        <p>Process documents directly in your browser.</p>
+      </div>
+      <div class="feature">
+        <span>🔐</span>
+        <h3>Privacy focused</h3>
+        <p>Your PDF is processed locally, not uploaded to a server.</p>
+      </div>
+      <div class="feature">
+        <span>📄</span>
+        <h3>Editable files</h3>
+        <p>Download documents you can edit and work with.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 PDFConvert. Built for simple document conversion.</p>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
